@@ -1,15 +1,15 @@
 [
     {
       "name": "title",
-      "description": "Desperately seeking strawberries"
+      "description": "Have potatoes, will travel"
     },
     {
       "name": "content",
-      "description": "Looking to trade for strawberries, I have potatoes and squash to offer"
+      "description": "I have too many potatoes, don't want them to go to waste"
     },
     {
         "name": "date_available",
-        "description": "July"
+        "description": "August"
       },
     {
       "name": "location",
@@ -17,11 +17,10 @@
     },
     {
         "name": "crop",
-        "description": "strawberries"
+        "description": "potatoes"
       },
     {
       "name": "quantity",
-      "description": 7
+      "description": 5
     }
   ]
-
