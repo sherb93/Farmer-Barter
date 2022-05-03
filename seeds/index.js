@@ -7,20 +7,23 @@ const requestSeeds = require("./request-data.json")
 
 
 const seedTables = async () => {
-    await sequelize.sync({ plain: true });
+    await sequelize.sync({ force: true });
 
     const users = await User.bulkCreate(userSeeds);
 
     for (const offer of offerSeeds) {
-        const newOffer = await Offer.create({
+        await Offer.create({
             ...offer,
             user_id: users[Math.floor(Math.random() * users.length)].id
         });
-    }
-}
+    };
 
-
-
-
+    for (const request of requestSeeds) {
+        await Request.create({
+            ...request,
+            user_id: users[Math.floor(Math.random() * users.length)].id
+        });
+    };
+};
 
 seedTables();
