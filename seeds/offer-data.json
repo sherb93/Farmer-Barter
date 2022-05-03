@@ -1,27 +1,21 @@
 [
     {
-      "name": "title",
-      "description": "Desperately seeking strawberries"
+      "title": "Desperately seeking strawberries"
     },
     {
-      "name": "content",
-      "description": "Looking to trade for strawberries, I have potatoes and squash to offer"
+      "content": "Looking to trade for strawberries, I have potatoes and squash to offer"
     },
     {
-        "name": "date_available",
-        "description": "July"
+      "date_available": "July"
       },
     {
-      "name": "location",
-      "description": "Augusta"
+      "location": "Augusta"
     },
     {
-        "name": "crop",
-        "description": "strawberries"
+      "crop": "strawberries"
       },
     {
-      "name": "quantity",
-      "description": 7
+      "quantity": 7
     }
   ]
 
