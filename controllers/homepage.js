@@ -10,7 +10,7 @@ module.exports = router;
 //get all offers
 router.get('/', (req, res) => {
     Offer.findAll()
-    .then(offerData => res.json(offerData))
+    .then(offerData => res.json(offerData)) //res.render, pass in offer data, activity 16
     .catch(err => {
         console.log(err);
         res.status(500).json(err); 
@@ -30,7 +30,8 @@ router.get('/:id', (req, res) => {
           res.status(404).json({ message: 'There are no offers with that ID.' });
           return;
         }
-        res.json(offerData);
+        const serializedOffer = offerData.get({ plain: true });
+        res.render('homepage', { serializedOffer, loggedIn: req.session.loggedIn });
       })
       .catch(err => {
         console.log(err);
