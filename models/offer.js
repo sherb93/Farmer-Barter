@@ -31,13 +31,16 @@ Offer.init(
             }
         },
         location: {
-            type: DataTypes.STRING(1000),
+            type: DataTypes.STRING,
+            allowNull: false
         },
         crop: {
-            type: DataTypes.STRING(1000),
+            type: DataTypes.STRING,
+            allowNull: false
         },
         quantity: {
-            type: DataTypes.STRING(1000),
+            type: DataTypes.INTEGER,
+            allowNull: false,
         },
         user_id: {
             type: DataTypes.INTEGER,
@@ -51,7 +54,7 @@ Offer.init(
         sequelize,
         freezeTableName: true,
         timestamps: true,
-        modelName: "user"
+        modelName: "offer"
     }
 )
 
