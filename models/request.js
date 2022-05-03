@@ -15,7 +15,7 @@ Request.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [3, 40]
+                len: [3, 255]
             }
         },
         content: {
@@ -25,10 +25,6 @@ Request.init(
         date_available: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true
-            }
         },
         location: {
             type: DataTypes.STRING,
