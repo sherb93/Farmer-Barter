@@ -1,19 +1,15 @@
 [
     {
-      "name": "username",
-      "description": "artichokeHEARTbeet"
+      "username": "artichokeHEARTbeet"
     },
     {
-      "name": "password",
-      "description": "ultra9471"
+      "password": "ultra9471"
     },
     {
-        "name": "email",
-        "description": "dirtfan@gmail.com"
+      "email": "dirtfan@gmail.com"
       },
     {
-      "name": "location",
-      "description": "Augusta"
+      "location": "Augusta"
     }
   ]
 

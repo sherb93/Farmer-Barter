@@ -1,26 +1,20 @@
 [
     {
-      "name": "title",
-      "description": "Have potatoes, will travel"
+      "title": "Have potatoes, will travel"
     },
     {
-      "name": "content",
-      "description": "I have too many potatoes, don't want them to go to waste"
+      "content": "I have too many potatoes, don't want them to go to waste"
     },
     {
-        "name": "date_available",
-        "description": "August"
+      "date_available": "August"
       },
     {
-      "name": "location",
-      "description": "Augusta"
+      "location": "Augusta"
     },
     {
-        "name": "crop",
-        "description": "potatoes"
+      "crop": "potatoes"
       },
     {
-      "name": "quantity",
-      "description": 5
+      "quantity": 5
     }
   ]
