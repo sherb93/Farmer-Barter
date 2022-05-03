@@ -8,4 +8,3 @@ app.use('/offers', offerRoutes);
 app.use("/requests", requestRoutes)
 
 module.exports = app;
-
