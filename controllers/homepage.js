@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Offer, Request, User } = require('../models');
+const { response } = require("./api");
 
 module.exports = router;
 
@@ -9,9 +10,20 @@ module.exports = router;
 
 //get all offers
 router.get('/offers', (req, res) => {
-    Offer.findAll()
-    .then(offerData =>  
-    res.render('offer', { offerData, loggedIn: req.session.loggedIn });
+    Offer.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["username", "email", "location"]
+        }
+      ]
+    })
+    .then(offerData => {
+    
+    const offers = offerData.map(offer => offer.get({ plain: true }))
+
+    res.render('offers', { offers, loggedIn: req.session.loggedIn })
+    })
     //res.render, pass in offer data, activity 16
     .catch(err => {
         console.log(err);
@@ -76,3 +88,13 @@ router.get('/requests/:id', (req, res) => {
         res.status(500).json(err);
       })
   });
+
+////////////
+///CREATE///
+////////////
+
+
+  //get all requests
+router.get('/create', (req, res) => {
+    res.render('createpostpage', { loggedIn: req.session.loggedIn });
+});
