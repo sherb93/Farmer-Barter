@@ -1,17 +1,26 @@
 const router = require("express").Router();
 const { Offer, Request, User } = require('../models');
 
-module.exports = router;
-
 ////////////
 ///OFFERS///
 ////////////
 
 //get all offers
 router.get('/offers', (req, res) => {
-    Offer.findAll()
-    .then(offerData =>  
-    res.render('offer', { offerData, loggedIn: req.session.loggedIn });
+    Offer.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["username", "email", "location"]
+        }
+      ]
+    })
+    .then(offerData => {
+    
+    const offers = offerData.map(offer => offer.get({ plain: true }))
+
+    res.render('offers', { offers, loggedIn: req.session.loggedIn })
+    })
     //res.render, pass in offer data, activity 16
     .catch(err => {
         console.log(err);
@@ -25,21 +34,28 @@ router.get('/offers/:id', (req, res) => {
     Offer.findOne({
       where: {
         id: req.params.id
-      },  
-    })
-      .then(offerData => {
-        if (!offerData) {
-          res.status(404).json({ message: 'There are no offers with that ID.' });
-          return;
+      },
+      include: [
+        {
+          model: User,
+          attributes: ["username", "email", "location"]
         }
-        const serializedOffer = offerData.get({ plain: true });
-        res.render('home', { serializedOffer, loggedIn: req.session.loggedIn });
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      })
-  });
+      ]  
+    })
+    .then(offerData => {
+      if (!offerData) {
+        res.status(404).json({ message: 'There are no offers with that ID.' });
+        return;
+      }
+      const offer = offerData.get({ plain: true });
+
+      res.render('offers', { offer, loggedIn: req.session.loggedIn });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
+});
 
 //////////////
 ///REQUESTS///
@@ -47,32 +63,55 @@ router.get('/offers/:id', (req, res) => {
 
 //get all requests
 router.get('/requests', (req, res) => {
-    Request.findAll()
-    .then(requestData => res.json(requestData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err); 
-    });
+  Request.findAll({
+    include: [
+      {
+        model: User,
+        attributes: ["username", "email", "location"]
+      }
+    ]
+  })
+  .then(requestData => {
+  
+  const requests = requestData.map(request => request.get({ plain: true }))
+
+  res.render('requests', { requests, loggedIn: req.session.loggedIn })
+  })
+  //res.render, pass in request data, activity 16
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err); 
+  });
 });
 
 //get a single request
 router.get('/requests/:id', (req, res) => {
-    // find one category by its `id` value
-    // be sure to include its associated Products 
-    Request.findOne({
-      where: {
-        id: req.params.id
-      },    
-    })
-      .then(requestData => {
-        if (!requestData) {
-          res.status(404).json({ message: 'There are no requests with that ID.' });
-          return;
-        }
-        res.json(requestData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      })
-  });
+  // find one category by its `id` value
+  Request.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: User,
+        attributes: ["username", "email", "location"]
+      }
+    ]  
+  })
+  .then(requestData => {
+    if (!requestData) {
+      res.status(404).json({ message: 'There are no requests with that ID.' });
+      return;
+    }
+    const request = requestData.get({ plain: true });
+
+    res.render('requests', { request, loggedIn: req.session.loggedIn });
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
+
+
+module.exports = router;
