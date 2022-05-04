@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Category, Request } = require('../../models');
+const { Request } = require('../../models');
 
 module.exports = router;
 

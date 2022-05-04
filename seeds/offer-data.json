@@ -1,26 +1,34 @@
 [
     {
-      "title": "Trying to get rid of these tomatos",
-      "content": "I have too many! Usually this is a good problem ",
-      "date_available": "August",
-      "location": "Augusta",
-      "crop": "potatoes",
+      "title": "Trying to get rid of some tomatoes",
+      "content": "I have too many! Usually this is a good problem but I'm worried they'll go bad before my family can use them up. Please contact me.",
+      "date_available": "May 4, 2022",
+      "location": "Augusta, GA",
+      "crop": "Tomatoes",
       "quantity": 5
     },
     {
       "title": "Have potatoes, will travel",
-      "content": "I have too many potatoes, don't want them to go to waste",
-      "date_available": "August",
-      "location": "Augusta",
-      "crop": "potatoes",
-      "quantity": 5
+      "content": "My husband and I RV around the country so it's no problem for us to come to you. We have 8lbs of potatoes that we're willing to give away, but if you have anything you want to trade we're open to that!",
+      "date_available": "May 15, 2022",
+      "location": "Conyers, GA",
+      "crop": "Potatoes",
+      "quantity": 8
     },
     {
-      "title": "Have potatoes, will travel",
-      "content": "I have too many potatoes, don't want them to go to waste",
-      "date_available": "August",
-      "location": "Augusta",
-      "crop": "potatoes",
-      "quantity": 5
+      "title": "Fresh Strawberries",
+      "content": "Our strawberry crops were generous this year! If you have any apples, peaches, or blueberries please contact me so we can trade!",
+      "date_available": "May 6, 2022",
+      "location": "LaGrange, GA",
+      "crop": "Strawberries",
+      "quantity": 6
+    },
+    {
+      "title": "Tomatoes galore",
+      "content": "My grandfather has a farm with a ton of tomato crops and he asked me to post on here to see if anyone is in need. He already supplied the grandkids but still has some leftover.",
+      "date_available": "May 6, 2022",
+      "location": "LaGrange, GA",
+      "crop": "Tomatoes",
+      "quantity": 6
     }
 ]
