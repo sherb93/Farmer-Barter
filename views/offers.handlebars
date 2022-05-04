@@ -1,12 +1,12 @@
 <!-- For each gallery, the 'gallery-details' partial is used to render the gallery data -->
 {{#each offers as |offer|}}
     <div class = "offer-header">
-        <h2>{{title}}</h2>
+        <h2>{{offer.title}}</h2>
         <ul>
-            <li>{{date_available}}</li>
-            <li>{{location}}</li>
-            <li>{{crop}}</li>
-            <li>{{quantity}}</li>
+            <li>{{offer.date_available}}</li>
+            <li>{{offer.location}}</li>
+            <li>{{offer.crop}}</li>
+            <li>{{offer.quantity}}</li>
         </ul>
         <p>{{content}}</p>
     </div>
