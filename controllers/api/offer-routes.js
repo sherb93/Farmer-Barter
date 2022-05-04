@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Offer, Request, User } = require('../../models');
+const { Offer } = require('../../models');
 
 module.exports = router;
 

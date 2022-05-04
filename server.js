@@ -9,8 +9,6 @@ const app = express();
 const hbs = create({});
 const PORT = process.env.PORT || 3001;
 
-const models = require('./models');
-
 // session options
 const sess = {
   secret: 'Super secret secret',
@@ -28,6 +26,7 @@ app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");

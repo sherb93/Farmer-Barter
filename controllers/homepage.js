@@ -6,6 +6,11 @@ const { Offer, Request, User } = require('../models');
 ////////////
 
 //get all offers
+router.get("/", (req, res) => {
+  res.render("login", { loggedIn: req.session.loggedIn });
+});
+
+
 router.get('/offers', (req, res) => {
     Offer.findAll({
       include: [

@@ -32,7 +32,10 @@ Offer.init(
         },
         crop: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                len: [20]
+            }
         },
         quantity: {
             type: DataTypes.INTEGER,
