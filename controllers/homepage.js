@@ -8,9 +8,11 @@ module.exports = router;
 ////////////
 
 //get all offers
-router.get('/', (req, res) => {
+router.get('/offers', (req, res) => {
     Offer.findAll()
-    .then(offerData => res.json(offerData)) //res.render, pass in offer data, activity 16
+    .then(offerData =>  
+    res.render('offer', { offerData, loggedIn: req.session.loggedIn });
+    //res.render, pass in offer data, activity 16
     .catch(err => {
         console.log(err);
         res.status(500).json(err); 
@@ -18,7 +20,7 @@ router.get('/', (req, res) => {
 });
 
 //get a single offer post
-router.get('/:id', (req, res) => {
+router.get('/offers/:id', (req, res) => {
     // find one category by its `id` value
     Offer.findOne({
       where: {
@@ -31,7 +33,7 @@ router.get('/:id', (req, res) => {
           return;
         }
         const serializedOffer = offerData.get({ plain: true });
-        res.render('homepage', { serializedOffer, loggedIn: req.session.loggedIn });
+        res.render('home', { serializedOffer, loggedIn: req.session.loggedIn });
       })
       .catch(err => {
         console.log(err);
@@ -44,7 +46,7 @@ router.get('/:id', (req, res) => {
 //////////////
 
 //get all requests
-router.get('/', (req, res) => {
+router.get('/requests', (req, res) => {
     Request.findAll()
     .then(requestData => res.json(requestData))
     .catch(err => {
@@ -54,7 +56,7 @@ router.get('/', (req, res) => {
 });
 
 //get a single request
-router.get('/:id', (req, res) => {
+router.get('/requests/:id', (req, res) => {
     // find one category by its `id` value
     // be sure to include its associated Products 
     Request.findOne({
