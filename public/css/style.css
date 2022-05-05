@@ -8,6 +8,7 @@ Cream: #fff5d0
 
 /* Add a black background color to the top navigation */
 .navbar {
+    /* margin-top: 0%; */
     background-color: #097969;
     overflow: hidden;
   }
@@ -88,7 +89,7 @@ Cream: #fff5d0
 /* set entire body that is webpage */
 body{
 	background: #AFE1AF;
-	padding-top: 25vh;	
+	/* padding-top: 25vh;	 */
 }
 /* set form background colour*/
 form{
@@ -101,31 +102,58 @@ form{
     margin: 5 px; 
 }
 
+.form-child{
+    display: inline-block;
+}
+
 .all-offers{
-    background-color: #fff5d0;
+    background-color: #FBF2DD;
     margin: 10px; 
     padding: 1px; 
     border-radius: 12px;
-    /* border: 2 px solid #097969;  */
+    border: 2px solid #097969; 
 }
 
-/* .each-offer{
-    /* background-color: #fff5d0;
+.each-offer{
+    background-color: #fff5d0;
+    margin: 20px; 
+    margin-left: 55px;
+    margin-right: 55px; 
     padding: 3px; 
-    border-radius: 12px; */
-    /* border: 2 px solid #097969;  */
- /* }  */
+    border-radius: 12px; 
+    border: 2px solid #097969; 
+} 
+
+.jumbotron{
+    background-color: #097969;
+    color: #fff5d0; 
+}
 
 .all-requests{
-    background-color: #fff5d0;
+    background-color: #FBF2DD;
     margin: 10px; 
     padding: 1px; 
     border-radius: 12px;
+    border: 2px solid #097969; 
 }
+
+.each-request{
+    background-color: #fff5d0;
+    margin: 20px; 
+    margin-left: 55px;
+    margin-right: 55px; 
+    padding: 3px; 
+    border-radius: 12px; 
+    border: 2px solid #097969; 
+} 
 
 .submission-form{
     background-color: #fff5d0;
     margin: 10px; 
     padding-left: 15px; 
     border-radius: 12px;
+}
+
+.submission-form h2{
+    text-align: center;
 }
