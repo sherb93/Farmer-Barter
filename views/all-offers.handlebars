@@ -1,15 +1,15 @@
 <div class = "all-offers">
-    <h1 style="color:#097969; text-align:center"; >View all offers</h1>
+    <h1 style="color:#097969; text-align:center"; >All Offers</h1>
     {{#each offers as |offer|}}
             <div class="each-offer">
-            <h2>{{offer.title}}</h2>
+            <a class="post-title" href="/offers/{{offer.user_id}}">{{offer.title}}</a>
             <ul>
                 <li>Date Available: {{offer.date_available}}</li>
                 <li>Location: {{offer.location}}</li>
                 <li>Crop: {{offer.crop}}</li>
                 <li>Quantity: {{offer.quantity}}lbs</li>
             </ul>
-            <p>{{content}}</p>
+            <p>{{offer.content}}</p>
             </div>
     {{/each}}
 </div>
