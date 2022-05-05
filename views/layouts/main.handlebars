@@ -21,7 +21,7 @@
       <h1>Farmer Barter</h1>
       <nav>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
+        {{#if loggedIn}}
         {{!-- <a href="/offers">profile</a> |
         <button class="no-button" id="logout">logout</button>
         <button class="no-button" id="view-offers-button">View all offers</button>
@@ -52,7 +52,7 @@
   </div>
 
   <!-- Render script for logged in users only -->
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>

@@ -17,7 +17,7 @@ router.get('/offers', (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["username", "email", "location"]
+          attributes: ["username", "email"]
         }
       ]
     })

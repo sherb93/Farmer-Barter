@@ -1,26 +1,26 @@
 [
     {
-      "title": "Trying to get rid of these tomatos",
-      "content": "I have too many! Usually this is a good problem",
-      "date_available": "August",
-      "location": "Augusta",
-      "crop": "potatoes",
-      "quantity": 5
+      "title": "Need Fresh Cherry Tomatoes ",
+      "content": "I'm looking to trade either onions or potatoes for Cherry tomatoes ",
+      "date_available": "July",
+      "location": "Stockbridge",
+      "crop": "Cherry tomatoes",
+      "quantity": 4
     },
     {
-      "title": "Have potatoes, will travel",
-      "content": "I have too many potatoes, don't want them to go to waste",
-      "date_available": "August",
-      "location": "Augusta",
-      "crop": "potatoes",
-      "quantity": 5
+      "title": "In need of Corn",
+      "content": "I'm looking for at least 10lb of Corn, willing to travel or meet near Savannah area.",
+      "date_available": "June",
+      "location": "Statesboro",
+      "crop": "Corn",
+      "quantity": 10
     },
     {
-      "title": "Have potatoes, will travel",
-      "content": "I have too many potatoes, don't want them to go to waste",
-      "date_available": "August",
-      "location": "Augusta",
-      "crop": "potatoes",
-      "quantity": 5
+      "title": "Looking for either Habanero or Serrano peppers",
+      "content": "I'm looking to trade Poblano peppers for either type of pepper.   ",
+      "date_available": "June",
+      "location": "Villa Rica",
+      "crop": "Peppers",
+      "quantity": 8
     }
 ]

@@ -32,14 +32,7 @@ User.init(
             validate: {
                 isEmail: true
             }
-        },
-        bio: {
-            type: DataTypes.STRING(1000),
-        },
-        location: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+        }
     },
     {
         hooks: {
@@ -47,6 +40,10 @@ User.init(
                 for (const user of newUserData) {
                     user.password = await bcrypt.hash(user.password, 10);
                 }
+            },
+            async beforeCreate(newUserData) {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
             },
             beforeUpdate: async (updatedUserData) => {
                 if (updatedUserData.password) {
