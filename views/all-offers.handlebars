@@ -1,0 +1,12 @@
+{{#each offers as |offer|}}
+    <div class = "all-offers">
+        <h2>{{offer.title}}</h2>
+        <ul>
+            <li>{{offer.date_available}}</li>
+            <li>{{offer.location}}</li>
+            <li>{{offer.crop}}</li>
+            <li>{{offer.quantity}}</li>
+        </ul>
+        <p>{{content}}</p>
+    </div>
+{{/each}}
