@@ -1,0 +1,13 @@
+<div class = "all-offers">
+    <a href= “/request/{{request.id}}> {{request.title}} ></a>
+    <h2>{{request.title}}</h2>
+    <h3>{{request.user.username}}</h3>
+    <ul>
+        <li>Date Available: {{request.date_available}}</li>
+        <li>Location: {{request.location}}</li>
+        <li>Crop: {{request.crop}}</li>
+        <li>Amount: {{request.quantity}}lbs</li>
+        <li>Email: {{request.user.email}}</li>
+    </ul>
+    <p>{{request.content}}</p>
+</div>
