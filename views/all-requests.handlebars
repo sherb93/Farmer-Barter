@@ -1,12 +1,15 @@
-{{#each requests as |request|}}
-    <div class = "all-requests">
-        <h2>{{request.title}}</h2>
-        <ul>
-            <li>{{request.date_available}}</li>
-            <li>{{request.location}}</li>
-            <li>{{requeset.crop}}</li>
-            <li>{{request.quantity}}</li>
-        </ul>
-        <p>{{content}}</p>
-    </div>
-{{/each}}
+<div class = "all-requests">
+    <h1 style="color:#097969; text-align:center"; >View all requests</h1>
+    {{#each requests as |request|}}
+        <div class = "each-request">
+            <h2>{{request.title}}</h2>
+            <ul>
+                <li>{{request.date_available}}</li>
+                <li>{{request.location}}</li>
+                <li>{{requeset.crop}}</li>
+                <li>{{request.quantity}}</li>
+            </ul>
+            <p>{{content}}</p>
+        </div>
+    {{/each}}
+</div>

@@ -1,14 +1,15 @@
-{{#each offers as |offer|}}
-    <div class = "all-offers">
-        <div class="each-offer">
-        <h2>{{offer.title}}</h2>
-        <ul>
-            <li>{{offer.date_available}}</li>
-            <li>{{offer.location}}</li>
-            <li>{{offer.crop}}</li>
-            <li>{{offer.quantity}}</li>
-        </ul>
-        <p>{{content}}</p>
-        </div>
-    </div>
-{{/each}}
+<div class = "all-offers">
+    <h1 style="color:#097969; text-align:center"; >View all offers</h1>
+    {{#each offers as |offer|}}
+            <div class="each-offer">
+            <h2>{{offer.title}}</h2>
+            <ul>
+                <li>{{offer.date_available}}</li>
+                <li>{{offer.location}}</li>
+                <li>{{offer.crop}}</li>
+                <li>{{offer.quantity}}</li>
+            </ul>
+            <p>{{content}}</p>
+            </div>
+    {{/each}}
+</div>
