@@ -1,6 +1,6 @@
-<div class="row justify-space-between-md">
+{{!-- <div class="row justify-space-between-md">
   <div class="login-card">
-    <h2 class="page-title">Login</h2>
+    <h2 class="page-title">Log in</h2>
     <form class="form login-form">
       <div class="form-group">
         <label for="email-login">Email:</label>
@@ -11,12 +11,12 @@
         <input class="form-input" type="password" id="password-login" />
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
+        <button class="btn btn-primary" type="submit">Log in</button>
       </div>
     </form>
   </div>
   <div class="login-card">
-    <h2 class="page-title">Signup</h2>
+    <h2 class="page-title">Sign up</h2>
     <form class="form signup-form">
       <div class="form-group">
         <label for="username-signup">Username:</label>
@@ -31,10 +31,69 @@
         <input class="form-input" type="password" id="password-signup" />
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
+        <button class="btn btn-primary" type="submit">Sign up</button>
       </div>
     </form>
   </div>
-</div>
+</div> --}}
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- Login form creation starts-->
+  <section class="container-fluid">
+    <!-- row and justify-content-center class is used to place the form in center -->
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form class="form-container">
+        <div class="form-group">
+          <h4 class="text-center font-weight-bold"> Log in </h4>
+          <label for="InputEmail1">Email Address</label>
+           <input type="email" class="form-control" id="InputEmail1" aria-describeby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="InputPassword1">Password</label>
+          <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        <div class="form-footer">
+          {{!-- <p> Don't have an account? <a href="#">Sign Up</a></p> --}}
+          
+        </div>
+        </form>
+      </section>
+    </section>
+  </section>
+    <section class="container-fluid">
+    <!-- row and justify-content-center class is used to place the form in center -->
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form class="form-container">
+        <div class="form-group">
+          <h4 class="text-center font-weight-bold"> Sign Up </h4>
+          <label for="InputEmail1">Email Address</label>
+           <input type="email" class="form-control" id="InputEmail1" aria-describeby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="InputUsername1">Username</label>
+          <input type="username" class="form-control" id="InputUsername1" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="InputPassword1">Password</label>
+          <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        <div class="form-footer">
+          {{!-- <p> Don't have an account? <a href="#">Sign Up</a></p> --}}
+          
+        </div>
+        </form>
+      </section>
+    </section>
+  </section>
+<!-- Login form creation ends -->
 
 <script src="/js/login.js"></script>
