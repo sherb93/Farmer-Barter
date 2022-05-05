@@ -118,6 +118,14 @@ form{
 
 .all-requests{
     background-color: #fff5d0;
-    padding: 3px; 
+    margin: 10px; 
+    padding: 1px; 
+    border-radius: 12px;
+}
+
+.submission-form{
+    background-color: #fff5d0;
+    margin: 10px; 
+    padding-left: 15px; 
     border-radius: 12px;
 }
