@@ -6,8 +6,13 @@ const { Offer, Request, User } = require('../models');
 ////////////
 
 //get all offers
-router.get("/", (req, res) => {
-  res.render("login", { loggedIn: req.session.loggedIn });
+router.get('/', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/offers');
+    return;
+  }
+
+  res.render('login');
 });
 
 
@@ -24,7 +29,7 @@ router.get('/offers', (req, res) => {
     
     const offers = offerData.map(offer => offer.get({ plain: true }))
 
-    res.render('offers', { offers, loggedIn: req.session.loggedIn })
+    res.render('all-offers', { offers, loggedIn: req.session.loggedIn })
     })
     //res.render, pass in offer data, activity 16
     .catch(err => {
@@ -43,7 +48,7 @@ router.get('/offers/:id', (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["username", "email", "location"]
+          attributes: ["username", "email"]
         }
       ]  
     })
@@ -54,7 +59,7 @@ router.get('/offers/:id', (req, res) => {
       }
       const offer = offerData.get({ plain: true });
 
-      res.render('offers', { offer, loggedIn: req.session.loggedIn });
+      res.render('offer', { offer, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
       console.log(err);
@@ -72,7 +77,7 @@ router.get('/requests', (req, res) => {
     include: [
       {
         model: User,
-        attributes: ["username", "email", "location"]
+        attributes: ["username", "email"]
       }
     ]
   })
@@ -80,7 +85,7 @@ router.get('/requests', (req, res) => {
   
   const requests = requestData.map(request => request.get({ plain: true }))
 
-  res.render('requests', { requests, loggedIn: req.session.loggedIn })
+  res.render('all-requests', { requests, loggedIn: req.session.loggedIn })
   })
   //res.render, pass in request data, activity 16
   .catch(err => {
@@ -110,7 +115,7 @@ router.get('/requests/:id', (req, res) => {
     }
     const request = requestData.get({ plain: true });
 
-    res.render('requests', { request, loggedIn: req.session.loggedIn });
+    res.render('request', { request, loggedIn: req.session.loggedIn });
   })
   .catch(err => {
     console.log(err);
