@@ -29,7 +29,9 @@ router.get('/offers', (req, res) => {
     
     const offers = offerData.map(offer => offer.get({ plain: true }))
 
-    res.render('all-offers', { offers, loggedIn: req.session.loggedIn })
+    console.log(req.session);
+
+    res.render('all-offers', { offers, loggedIn: req.session.loggedIn, userid: req.session.userid })
     })
     //res.render, pass in offer data, activity 16
     .catch(err => {
@@ -124,7 +126,7 @@ router.get('/requests/:id', (req, res) => {
 });
 
 router.get("/createpost", (req, res) => {
-  res.render('createpost', { loggedIn: req.session.loggedIn });
+  res.render('createpost', { loggedIn: req.session.loggedIn, userid: req.session.userid });
 });
 
 

@@ -13,6 +13,7 @@ const loginFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
+    // console.log(response);
     response.ok ? document.location.replace("/offers") : alert(response.statusText);
   }
 };

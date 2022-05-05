@@ -13,6 +13,7 @@ router.post('/', (req, res) => {
       location: req.body.location,
       crop: req.body.crop,
       quantity: req.body.quantity, 
+      user_id: req.session.userid
     })
       .then(requestData => res.json(requestData))
       .catch(err => {

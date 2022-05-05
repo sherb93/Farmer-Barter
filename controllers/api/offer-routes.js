@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Offer } = require('../../models');
+const { User, Offer } = require('../../models');
 
 module.exports = router;
 
@@ -12,7 +12,8 @@ router.post('/', (req, res) => {
       date_available: req.body.date_available,
       location: req.body.location,
       crop: req.body.crop,
-      quantity: req.body.quantity, 
+      quantity: req.body.quantity,
+      user_id: req.session.userid
     })
       .then(offerData => res.json(offerData))
       .catch(err => {
