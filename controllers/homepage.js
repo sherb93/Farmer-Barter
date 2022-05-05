@@ -123,5 +123,8 @@ router.get('/requests/:id', (req, res) => {
   })
 });
 
+router.get("/createpost", (req, res) => {
+    res.render('createpost');
+  });
 
 module.exports = router;
