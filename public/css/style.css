@@ -7,13 +7,13 @@ Cream: #fff5d0
 /*Navbar styles*/
 
 /* Add a black background color to the top navigation */
-.topnav {
+.navbar {
     background-color: #097969;
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
-  .topnav a {
+  .navbar a {
     float: left;
     color: #fff5d0;
     text-align: center;
@@ -23,15 +23,20 @@ Cream: #fff5d0
   }
   
   /* Change the color of links on hover */
-  .topnav a:hover {
+  .navbar a:hover {
     background-color: #fff5d0;
     color: black;
   }
   
   /* Add a color to the active/current link */
-  .topnav a.active {
+  .navbar a.active {
     background-color: #AFE1AF;
     color: #fff5d0;
+  }
+
+  .navbar h3{
+      color: #fff5d0;
+      margin-right: 3px; 
   }
 
 
@@ -94,4 +99,25 @@ form{
 	border-radius: 10px;
 	padding: 30px;
     margin: 5 px; 
+}
+
+.all-offers{
+    background-color: #fff5d0;
+    margin: 10px; 
+    padding: 1px; 
+    border-radius: 12px;
+    /* border: 2 px solid #097969;  */
+}
+
+/* .each-offer{
+    /* background-color: #fff5d0;
+    padding: 3px; 
+    border-radius: 12px; */
+    /* border: 2 px solid #097969;  */
+ /* }  */
+
+.all-requests{
+    background-color: #fff5d0;
+    padding: 3px; 
+    border-radius: 12px;
 }
