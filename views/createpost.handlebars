@@ -3,22 +3,22 @@
         <h2>Create a request or an offer</h2></label></br>
 
     <div>
-    <label for="post-title">Enter the name for your post:</label><br>
-    <input type="text" id="post-title" name="post-title"><br>
+        <label for="post-title">Enter the name for your post:</label><br>
+        <input type="text" id="post-title" name="post-title"><br>
     </div>
 
     <p>What type of post would you like to create?</p>
     <div>
-        <input type="radio" id="offer" name="post-type" value="offer">
-        <label for="offer">Make an offer</label><br>
-        <input type="radio" id="request" name="post-type" value="offer">
-        <label for="css">Make a request</label><br>
+        <input type="radio" id="Offer" name="post-type" value="Offer">
+        <label for="Offer">Make an offer</label><br>
+        <input type="radio" id="Request" name="post-type" value="Request">
+        <label for="Request">Make a request</label><br>
     </div>
         <p>When would you like this trade to occur?</p>
-    <div>
-        <input type="radio" id="june" name="post-month" value="june">
+    <div id="post-month-options">
+        <input type="radio" id="June" name="post-month" value="June">
         <label for="offer">June</label>
-        <input type="radio" id="july" name="post-month" value="july">
+        <input type="radio" id="July" name="post-month" value="July">
         <label for="css">July</label>
         <input type="radio" id="August" name="post-month" value="August">
         <label for="css">August</label><br>
@@ -27,13 +27,13 @@
     <br>
     
     <div>
-    <label for="cars">Choose your location:</label>
+    <label for="city">Choose your location:</label>
         <select name="city" id="city">
-        <option value="atlanta">Atlanta</option>
-        <option value="augusta">Augusta</option>
-        <option value="athens">Athens</option>
-        <option value="savannah">Savannah</option>
-        <option value="valdosta">Valdosta</option>
+            <option value="Atlanta">Atlanta</option>
+            <option value="Augusta">Augusta</option>
+            <option value="Athens">Athens</option>
+            <option value="Savannah">Savannah</option>
+            <option value="Valdosta">Valdosta</option>
         </select>
     </div>
     
@@ -64,5 +64,4 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script> 
-
-
+<script src="/js/postsubmit.js"

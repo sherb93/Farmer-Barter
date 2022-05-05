@@ -1,6 +1,6 @@
 {{#each requests as |request|}}
     <div class = "all-requests">
-        <h2>{{request.title}}</h2>
+        <a href="/requests/{{request.id}}">{{request.title}}</a>
         <ul>
             <li>{{request.date_available}}</li>
             <li>{{request.location}}</li>
