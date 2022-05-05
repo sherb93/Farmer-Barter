@@ -102,6 +102,10 @@ form{
     margin: 5 px; 
 }
 
+.form-child{
+    display: inline-block;
+}
+
 .all-offers{
     background-color: #FBF2DD;
     margin: 10px; 
@@ -119,6 +123,11 @@ form{
     border-radius: 12px; 
     border: 2px solid #097969; 
 } 
+
+.jumbotron{
+    background-color: #097969;
+    color: #fff5d0; 
+}
 
 .all-requests{
     background-color: #FBF2DD;
