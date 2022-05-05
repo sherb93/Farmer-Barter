@@ -34,7 +34,7 @@ Request.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [20]
+                len: [0, 50]
             }
         },
         quantity: {
