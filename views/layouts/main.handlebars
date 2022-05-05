@@ -18,27 +18,39 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>Farmer Barter</h1>
+      {{!-- <h1>Farmer Barter</h1> --}}
       <nav>
         <!-- Conditionally render login or logout links -->
-        {{!-- <a href="/offers">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        <button class="no-button" id="view-offers-button">View all offers</button>
-        <button class="no-button" id="view-requests-button">View all requests</button>
-        <button class="no-button" id="create-request">Create request</button>
-        <button class="no-button" id="create-offer">Create offer</button> --}}
+        {{#if loggedIn}}
 
-        <div class="topnav">
-          {{#if loggedIn}}
-          <a class="active" href="/">Home</a>
-          <a href="/offers">Offers</a>
-          <a href="/requests">Requests</a>
-          <a href="/createpost">Create a post</a>
-          <a id="logout">Log out</a>
-          {{else}}
-          <a href="/login">login</a>
-          {{/if}}
-        </div>
+  <nav class="navbar navbar-expand-lg ">
+  <h3>Farmer Barter</h3>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/offers">View all offers</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/requests">View all requests</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/createpost">Create post</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Log out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
