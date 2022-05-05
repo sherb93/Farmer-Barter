@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Offer, Request, User } = require('../models');
-const { response } = require("./api");
 
 ////////////
 ///OFFERS///
@@ -17,7 +16,7 @@ router.get('/offers', (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["username", "email", "location"]
+          attributes: ["username", "email"]
         }
       ]
     })
@@ -100,7 +99,7 @@ router.get('/requests/:id', (req, res) => {
     include: [
       {
         model: User,
-        attributes: ["username", "email", "location"]
+        attributes: ["username", "email"]
       }
     ]  
   })

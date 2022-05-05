@@ -2,10 +2,8 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
-
-  console.log(email, password);
+  const email = document.querySelector('#InputEmail1').value.trim();
+  const password = document.querySelector('#InputPassword1').value.trim();
 
   if (email && password) {
     // Send a POST request to the API endpoint
@@ -15,43 +13,28 @@ const loginFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/offers');
-    } else {
-      alert(response.statusText);
-    }
+    response.ok ? document.location.replace("/offers") : alert(response.statusText);
   }
 };
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const username = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+  const username = document.querySelector('#InputUsername2').value.trim();
+  const email = document.querySelector('#InputEmail2').value.trim();
+  const password = document.querySelector('#InputPassword2').value.trim();
 
   if (username && email && password) {
-    const response = await fetch('/login', {
+    const response = await fetch('/login/signup', {
       method: 'POST',
       body: JSON.stringify({ username, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (response.ok) {
-      document.location.replace('/offers');
-    } else {
-      alert(response.statusText);
-    }
+    response.ok ? document.location.replace("/offers") : alert(response.statusText);
   }
 };
 
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
-
-const test = function() {
-  console.log("IS THIS FILE EVEN LOADING???")
-};
-
-test();
+document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
