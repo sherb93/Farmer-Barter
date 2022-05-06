@@ -1,12 +1,14 @@
 <div class = "all-offers">
-    <h2>{{offer.title}}</h2>
-    <h3>{{offer.user.username}}</h3>
-    <ul>
-        <li>Date Available: {{offer.date_available}}</li>
-        <li>Location: {{offer.location}}</li>
-        <li>Crop: {{offer.crop}}</li>
-        <li>Amount: {{offer.quantity}}lbs</li>
-        <li>Email: {{offer.user.email}}</li>
-    </ul>
-    <p>{{offer.content}}</p>
+    <h1 style="color:#097969; text-align:center"; >{{offer.user.username}}'s Request</h1>
+        <div class="each-offer">
+        <h1 class="post-title">{{offer.title}}</h1>
+        <ul>
+            <li>Date Available: {{offer.date_available}}</li>
+            <li>Location: {{offer.location}}</li>
+            <li>Crop: {{offer.crop}}</li>
+            <li>Quantity: {{offer.quantity}}lbs</li>
+            <li>Email: {{offer.user.email}}</li>
+        </ul>
+        <p>{{offer.content}}</p>
+        </div>
 </div>

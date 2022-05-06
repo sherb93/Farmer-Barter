@@ -1,15 +1,15 @@
 <div class = "all-requests">
-    <h1 style="color:#097969; text-align:center"; >View all requests</h1>
+    <h1 style="color:#097969; text-align:center"; >All Requests</h1>
     {{#each requests as |request|}}
         <div class = "each-request">
-            <h2>{{request.title}}</h2>
+            <a class="post-title" href="/requests/{{request.id}}">{{request.title}}</a>
             <ul>
-                <li>{{request.date_available}}</li>
-                <li>{{request.location}}</li>
-                <li>{{requeset.crop}}</li>
-                <li>{{request.quantity}}</li>
+                <li>Date Available: {{request.date_available}}</li>
+                <li>Location: {{request.location}}</li>
+                <li>Crop: {{request.crop}}</li>
+                <li>Quantity: {{request.quantity}}lbs</li>
             </ul>
-            <p>{{content}}</p>
+            <p>{{request.content}}</p>
         </div>
     {{/each}}
 </div>
