@@ -1,66 +1,80 @@
-<form class="submission-form">
-    <label for="post-header" style="color:#097969; text-align:center"; >
-        <h2>Create a request or an offer</h2></label></br>
+<div class="all-create">
 
-    <div>
+    <label for="post-header">
+            <h2 id="create-header" style="color:#097969; align-items: center; ">Create a request or an offer</h2>
+    </label></br>
+    <form class="submission-form">
+        {{!-- <label for="post-header">
+            <h2 id="create-header" style="color:#097969; text-align:center;">Create a request or an offer</h2></label></br> --}}
+
+        <div>
         <label for="post-title">Enter the name for your post:</label><br>
         <input type="text" id="post-title" name="post-title"><br>
-    </div>
+        <hr>
+        </div>
 
-    <p>What type of post would you like to create?</p>
-    <div>
-        <input type="radio" id="Offer" name="post-type" value="Offer">
-        <label for="Offer">Make an offer</label><br>
-        <input type="radio" id="Request" name="post-type" value="Request">
-        <label for="Request">Make a request</label><br>
-    </div>
-        <p>When would you like this trade to occur?</p>
-    <div id="post-month-options">
-        <input type="radio" id="June" name="post-month" value="June">
-        <label for="offer">June</label>
-        <input type="radio" id="July" name="post-month" value="July">
-        <label for="css">July</label>
-        <input type="radio" id="August" name="post-month" value="August">
-        <label for="css">August</label><br>
-    </div>
+        <p>What type of post would you like to create?</p>
+        <div>
+            <input type="radio" id="offer" name="post-type" value="offer">
+            <label for="offer">Make an offer</label><br>
+            <input type="radio" id="request" name="post-type" value="request">
+            <label for="request">Make a request</label><br>
+        <hr>
+        </div>
+            <p>When would you like this trade to occur?</p>
+        <div>
+            <input type="radio" id="June" name="post-month" value="June">
+            <label for="June">June</label>
+            <input type="radio" id="July" name="post-month" value="July">
+            <label for="July">July</label>
+            <input type="radio" id="August" name="post-month" value="August">
+            <label for="August">August</label><br>
+        <hr>
+        </div>
 
-    <br>
-    
-    <div>
-    <label for="city">Choose your location:</label>
-        <select name="city" id="city">
+        <br>
+        
+        <div>
+        <label for="cars">Choose your location:</label>
+            <select name="city" id="city">
             <option value="Atlanta">Atlanta</option>
             <option value="Augusta">Augusta</option>
             <option value="Athens">Athens</option>
             <option value="Savannah">Savannah</option>
             <option value="Valdosta">Valdosta</option>
-        </select>
-    </div>
-    
-    <br>
+            </select>
+        <hr>
+        </div>
+        
+        <br>
 
-    <div>
-    <label for="post-crop">Enter the crop you would like to trade:</label><br>
-    <input type="text" id="post-crop" name="post-crop"><br>
-    </div>
+        <div>
+        <label for="post-crop">Enter the crop you would like to trade:</label><br>
+        <input type="text" id="post-crop" name="post-crop"><br>
+        </div>
+        <hr>
+        <br>
 
-    <br>
+        <div>
+        <label for="post-quantity">Enter the amount of the crop you would like to trade (in pounds):</label><br>
+        <input type="text" id="post-quantity" name="post-quantity"><br>
+    <hr>
+        </div>
 
-    <div>
-    <label for="post-quantity">Enter the amount of the crop you would like to trade (in pounds):</label><br>
-    <input type="text" id="post-quantity" name="post-quantity"><br>
-    </div>
+        <br>
 
-    <br>
+        <div>
+        <label for="post-content">Enter any other information you would like to share:</label><br>
+        <input type="text" id="post-content" name="post-content"><br>
+        </div>
 
-    <div>
-    <label for="post-content">Enter any other information you would like to share:</label><br>
-    <input type="text" id="post-content" name="post-content"><br>
-    </div>
+        <div id="button-holder">
+        <input class = "btn" type="submit" value="Submit">
+        </div>
 
-    <input class = "btn" type="submit" value="Submit">
-
-</form>
+    </form>
+    {{!-- <input class = "btn submit-button" type="submit" value="Submit"> --}}
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script> 

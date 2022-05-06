@@ -51,17 +51,13 @@ Cream: #fff5d0
       background-color: #097969;
       color: #fff5d0; 
       border: none;
-      /* padding: 20px; */
       text-align: center;
       text-decoration: none;
-      display: inline-block;
       font-size: 16px;
       margin: 4px 2px;
       border-radius: 12px;
-  }
-
-  .submission-form {
-      background-color: #fff5d0;
+      align-items: center;
+      width: 200px; 
   }
 
   .login-card{
@@ -102,8 +98,13 @@ form{
     margin: 5 px; 
 }
 
+.form-parent{
+    width: 100%;
+}
+
 .form-child{
-    display: inline-block;
+    width: 50%; 
+    float: left;
 }
 
 .all-offers{
@@ -152,10 +153,13 @@ form{
     margin: 10px; 
     padding-left: 15px; 
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
 }
 
 .submission-form h2{
     text-align: center;
+    padding: 10px;
 }
 
 .post-title {
@@ -163,4 +167,23 @@ form{
     color: black;
     font-size: 2rem;
     font-weight: 600;
+}
+
+#create-header{
+    text-align: center;
+}
+
+.submit-button{
+    text-align: center;
+}
+
+.all-create {
+    display: flex;
+    flex-direction: column;
+}
+
+#button-holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

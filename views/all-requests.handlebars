@@ -2,7 +2,7 @@
     <h1 style="color:#097969; text-align:center"; >All Requests</h1>
     {{#each requests as |request|}}
         <div class = "each-request">
-            <a class="post-title" href="/offers/{{request.user_id}}">{{request.title}}</a>
+            <a class="post-title" href="/requests/{{request.id}}">{{request.title}}</a>
             <ul>
                 <li>Date Available: {{request.date_available}}</li>
                 <li>Location: {{request.location}}</li>

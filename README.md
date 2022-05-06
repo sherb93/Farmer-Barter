@@ -15,8 +15,17 @@ Our landing page features a blurb containing our purpose and drive for creating 
 Below the mission statement we have a login and sign up form.
 
 ## View All Offers/Requests
-Farmer Barter contains two main pages where users can view all offers and requests made by other memebers of the site. In these posts, users can state:
+Farmer Barter contains two main pages where users can view all offers and requests made by other members of the site. In these posts, users can state:
 - The date these crops are available.
 - The type of crop being offered or requested.
 - The quantity in lbs.
 - The users location.
+
+## Future Additions
+We're proud of the MVP we were able to push out in such a short time, but we have a lot of features we wish to implement in the future.
+- Recruiting a third party API to conveniently offer users crop information on the same website.
+- Directly communicate with other users on the platform.
+- Have posts expire after a certain amount of time.
+- Organize posts by every different category.
+- Personal Profiles for users that include post history and more personal information.
+- Expand on our UX/UI design.

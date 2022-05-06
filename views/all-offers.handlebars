@@ -2,7 +2,7 @@
     <h1 style="color:#097969; text-align:center"; >All Offers</h1>
     {{#each offers as |offer|}}
             <div class="each-offer">
-            <a class="post-title" href="/offers/{{offer.user_id}}">{{offer.title}}</a>
+            <a class="post-title" href="/offers/{{offer.id}}">{{offer.title}}</a>
             <ul>
                 <li>Date Available: {{offer.date_available}}</li>
                 <li>Location: {{offer.location}}</li>
