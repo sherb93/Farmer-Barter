@@ -1,8 +1,8 @@
 const express = require('express');
 const sequelize = require('./config/connection');
-const controllers = require('./controllers');
-const { create } = require("express-handlebars");
-const session = require("express-session");
+const controllers = require('./routes');
+const { create } = require("express-handlebars"); 
+const session = require("express-session"); // npm for adding session row to SQL tables
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
@@ -22,19 +22,20 @@ const sess = {
   })
 };
 
+// MIDDLEWARE
 app.use(session(sess));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// HANDLEBARS ENGINE
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // turn on routes
 app.use(controllers);
 
-// turn on connection to db and server
+// start connection to db - then server. GET request made at "/" renders homepage.
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

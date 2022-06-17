@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Offer, Request, User } = require('../models');
+const { getPostsByDate, getPostsByCropAsc } = require("../controllers/posts-controllers")
 
 ////////////
 ///OFFERS///
@@ -15,6 +16,8 @@ router.get('/', (req, res) => {
   res.render('login');
 });
 
+router.route("/offers").get(getPostsByDate);
+router.route("/test").get(getPostsByCropAsc);
 
 router.get('/offers', (req, res) => {
     Offer.findAll({

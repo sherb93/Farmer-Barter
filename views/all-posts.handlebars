@@ -1,0 +1,15 @@
+<div class = "all-offers">
+    <h1 style="color:#097969; text-align:center"; >All Offers</h1>
+    {{#each sortedPosts as |post|}}
+            <div class="each-offer">
+            <a class="post-title" href="/offers/{{post.id}}">{{post.title}}</a>
+            <ul>
+                <li>Date Available: {{post.date_available}}</li>
+                <li>Location: {{post.location}}</li>
+                <li>Crop: {{post.crop}}</li>
+                <li>Quantity: {{post.quantity}}lbs</li>
+            </ul>
+            <p>{{post.content}}</p>
+            </div>
+    {{/each}}
+</div>
